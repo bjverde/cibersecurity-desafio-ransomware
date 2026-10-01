@@ -36,7 +36,7 @@ O objetivo é compreender na prática como funcionam os algoritmos criptográfic
 ### 3. Chave de Criptografia
 - Nos scripts de exemplo, foi utilizada uma chave simétrica de 16 bytes (128 bits):
   ```python
-  key = b"msantos2026santosm"  # 16 caracteres / 128 bits
+  key = b"msantos2026sant"  # 16 caracteres / 128 bits
   ```
 
 ---
