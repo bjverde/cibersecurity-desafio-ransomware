@@ -54,12 +54,12 @@ O objetivo é compreender na prática como funcionam os algoritmos criptográfic
 pip install pyaes
 ```
 
-#### No Debian / Ubuntu / WSL (Linux com PEP 668):
-Em versões modernas do Debian/Ubuntu, o ambiente Python do sistema é gerenciado externamente. Você pode instalar usando um **ambiente virtual (recomendado)** ou via parâmetro direto:
+#### No Kali Linux / Debian / Ubuntu / WSL (Linux com PEP 668):
+Em versões recentes do **Kali Linux (2023+)**, **Debian (12+)** e **Ubuntu (23.04+)**, o ambiente Python é protegido por padrão (*externally managed environment*). Você pode instalar utilizando um **Ambiente Virtual (recomendado)** ou via **instalação direta com flag**:
 
 **Opção A: Utilizando Ambiente Virtual (Recomendado)**
 ```bash
-# 1. Instale o pacote de venv se necessário
+# 1. Instale o pacote python3-venv (caso ainda não esteja instalado)
 sudo apt update && sudo apt install -y python3-venv python3-full
 
 # 2. Crie e ative o ambiente virtual
@@ -69,10 +69,15 @@ source .venv/bin/activate
 # 3. Instale a biblioteca
 pip install pyaes
 ```
+> 💡 *Dica:* Para desativar o ambiente virtual após o uso, basta digitar `deactivate`.
 
-**Opção B: Instalação Direta no Sistema**
+**Opção B: Instalação Direta no Sistema / Kali Linux**
 ```bash
 pip install pyaes --break-system-packages
+```
+ou especificando o interpretador:
+```bash
+python3 -m pip install --break-system-packages pyaes
 ```
 
 ### 2. Executando a Criptografia
