@@ -13,7 +13,7 @@ with open(file_name, "rb") as file:
     file_data = file.read()
 
 # Chave simétrica para descriptografia (deve ser idêntica à utilizada na criptografia)
-key = b"testeransomwares"
+key = b"msantos2026santo"
 aes = pyaes.AESModeOfOperationCTR(key)
 
 # Descriptografar os dados
