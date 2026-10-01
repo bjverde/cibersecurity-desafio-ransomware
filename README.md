@@ -48,9 +48,31 @@ O objetivo é compreender na prática como funcionam os algoritmos criptográfic
 - Biblioteca `pyaes` instalada no ambiente Python.
 
 ### 1. Instalação das Dependências
-Instale o módulo `pyaes` via terminal:
-```bash
+
+#### No Windows:
+```powershell
 pip install pyaes
+```
+
+#### No Debian / Ubuntu / WSL (Linux com PEP 668):
+Em versões modernas do Debian/Ubuntu, o ambiente Python do sistema é gerenciado externamente. Você pode instalar usando um **ambiente virtual (recomendado)** ou via parâmetro direto:
+
+**Opção A: Utilizando Ambiente Virtual (Recomendado)**
+```bash
+# 1. Instale o pacote de venv se necessário
+sudo apt update && sudo apt install -y python3-venv python3-full
+
+# 2. Crie e ative o ambiente virtual
+python3 -m venv .venv
+source .venv/bin/activate
+
+# 3. Instale a biblioteca
+pip install pyaes
+```
+
+**Opção B: Instalação Direta no Sistema**
+```bash
+pip install pyaes --break-system-packages
 ```
 
 ### 2. Executando a Criptografia
