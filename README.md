@@ -85,6 +85,9 @@ Certifique-se de que o arquivo de exemplo `teste.txt` existe no diretório e exe
 ```bash
 python encrypter.py
 ```
+![encrypter](image/cript.png)
+
+
 **Resultado esperado:**
 - O arquivo original `teste.txt` é removido.
 - É gerado o arquivo criptografado `teste.txt.ransomwaretroll`.
@@ -94,6 +97,9 @@ Para restaurar o arquivo original a partir dos dados criptografados, execute:
 ```bash
 python decrypter.py
 ```
+
+![decrypter](image/decript.png)
+
 **Resultado esperado:**
 - O arquivo criptografado `teste.txt.ransomwaretroll` é removido.
 - O arquivo original `teste.txt` é restaurado com seu conteúdo legível original.
