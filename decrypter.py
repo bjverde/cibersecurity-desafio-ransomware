@@ -1,6 +1,27 @@
 import os
 import pyaes
 
+
+def clear_screen():
+    """Limpa o console do terminal de acordo com o sistema operacional."""
+    os.system("cls" if os.name == "nt" else "clear")
+
+
+def show_header():
+    """Exibe um cabeçalho centralizado com informações do programa."""
+    clear_screen()
+    width = 65
+    print("=" * width)
+    print("DECRYPTER - SIMULADOR DE DESCRIPTOGRAFIA".center(width))
+    print("=" * width)
+    print("Resumo: Restaura o arquivo criptografado (.ransomwaretroll)".center(width))
+    print("revertendo a cifra com a chave simétrica AES-128.".center(width))
+    print("=" * width)
+    print()
+
+
+show_header()
+
 file_name = "teste.txt.ransomwaretroll"
 
 print(f"[*] Localizando o arquivo criptografado: {file_name}...")
@@ -30,3 +51,6 @@ with open(new_file_name, "wb") as new_file:
     new_file.write(decrypt_data)
 
 print(f"[+] Sucesso! Arquivo restaurado: {new_file_name}")
+print()
+print()
+print()
